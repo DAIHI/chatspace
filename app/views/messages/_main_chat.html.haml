@@ -1,0 +1,27 @@
+.chat-main
+  .group-info
+    .group-info__main
+      %p.group-info__main__name
+        test
+      %p.group-info__main__member
+        Member：daihi
+    .group-info__edit
+      = link_to "#", class: "group-info__edit__link" do
+        Edit
+  .message-list
+    .message-list__message
+      .message-list__message__info
+        %p.message-list__message__info__name
+          daihi
+        %p.message-list__message__info__time
+          2020/01/04(sat) 16:43:18
+      %p.message-list__message__main
+        やぁ
+  .message-form
+    %form.new-message
+      .input-box
+        %input{type: 'text', class: 'input-box__text', placeholder: 'type a message'}
+        %label{class: "input-box__image"}
+          = icon('fa', 'image')
+          %input{type: "file", class: 'input-box__image__file'}
+      %input{type: 'submit', class: 'submit_btn', value: 'Send'}
